@@ -269,9 +269,10 @@ async def login(acc: Account, cfg: LoginConfig | None = None) -> Account:
             if not rep:
                 break
 
+        print("forked login...")
         # assert "ct0" in client.cookies, "ct0 not in cookies (most likely ip ban)"
         # client.headers["x-csrf-token"] = client.cookies["ct0"]
-        client.headers["x-csrf-token"] = "1893e8395c32cb0be5f77a71640d5c41d055462be8862bc6972be61e410805078b2628d69235b01ec2b9153372e6e8cc3c1dbd33daca99da1d34b63373c1e469c74e708fbf648ba44ea850ac90c9a28b"
+        client.headers["x-csrf-token"] = "70d77293c6e3cb826c28c2eee80fa48119c4846fd4fff3cbeed4160fec7ddf2e87378c6043b55aa83614dc85e18a5c29cd7468aa7cc6778f29f7f710ff2133a4f72c6f80ac76a30a8570d85d3323b35f"
         client.headers["x-twitter-auth-type"] = "OAuth2Session"
 
         acc.active = True
