@@ -56,7 +56,9 @@ class Account(JSONTrait):
         proxy = proxies[0] if proxies else None
 
         transport = AsyncHTTPTransport(retries=2)
-        client = AsyncClient(proxy=proxy, follow_redirects=True, transport=transport)
+        print("---- test here")
+        client = AsyncClient(proxy=proxy, verify=False, follow_redirects=True, transport=transport)
+        print("---- test here 2")
 
         # saved from previous usage
         client.cookies.update(self.cookies)
