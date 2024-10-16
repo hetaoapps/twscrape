@@ -57,7 +57,7 @@ class Account(JSONTrait):
 
         transport = AsyncHTTPTransport(retries=2)
         print("---- test here")
-        client = AsyncClient(proxy=proxy, verify=False, follow_redirects=True, transport=transport)
+        client = AsyncClient(proxy=proxy, follow_redirects=True, transport=transport)
         print("---- test here 2")
 
         # saved from previous usage
